@@ -1,10 +1,7 @@
 
-
-* {
-  background-color: aquamarine;
-}
-
 body {
+  width: 100%;
+  background-color: #87e3e6;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -15,6 +12,7 @@ header {
 nav {
   width: 50%;
   margin: 0 auto;
+  padding-bottom: 15px;
 }
 
 nav ul {
@@ -24,9 +22,11 @@ nav ul {
 }
 
 nav li {
-  margin: 5px 30px;
+  text-align: center;
+  margin: 5px auto;
   padding: 5px;
-  display: inline-block;
+  display: block;
+  font-size: 20px;
 }
 
 h1, h2, h3 {
@@ -39,12 +39,16 @@ h1, h2, h3 {
 }
 
 .container {
-  width: 100%;
+  padding: 10px;
+  background-color: #c6c6c6;
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.5);
 }
 
 #projects {
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 90%;
 }
 
@@ -52,18 +56,22 @@ h1, h2, h3 {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .projectDescription {
-  text-align: justify;
-  width: 75%;
-  margin: 0 auto;
+  vertical-align: top;
+  text-align: left;
+  display: inline-block;
+  width: 45%;
+  margin-left: 25px;
+  font-size: 18px;
 }
 
 img.projectImage {
-  width: 75%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 45%;
+  display: inline-block;
 }
 
 img.icon {
@@ -79,14 +87,23 @@ a {
 a.projectLink {
   width: 20%;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 5px;
   display: block;
+  font-size: 18px;
+}
+
+li a:hover {
+  padding: 5px;
+  text-decoration: underline;
+  border: 0 solid cornsilk;
+  border-radius: 5px;
+  background-color: cornsilk;
 }
 
 a.projectLink:hover {
   text-decoration: underline;
-  border: 1px solid cornsilk;
+  border: 0 solid cornsilk;
   border-radius: 5px;
   background-color: cornsilk;
 }
@@ -95,4 +112,9 @@ a img:hover {
   border: 1px solid cornsilk;
   border-radius: 5px;
   background-color: cornsilk;
+}
+
+footer {
+  width: 20%;
+  margin: 15px auto;
 }
