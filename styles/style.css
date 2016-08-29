@@ -1,4 +1,98 @@
 
+
+* {
+  background-color: aquamarine;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  margin-top: 25px;
+}
+
+nav {
+  width: 50%;
+  margin: 0 auto;
+}
+
+nav ul {
+  padding: 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+nav li {
+  margin: 5px 30px;
+  padding: 5px;
+  display: inline-block;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 10px;
+}
+
+.projectTemplate {
+  display: none;
+}
+
+.container {
+  width: 100%;
+}
+
+#projects {
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.projectContent {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projectDescription {
+  text-align: justify;
+  width: 75%;
+  margin: 0 auto;
+}
+
+img.projectImage {
+  width: 75%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+img.icon {
+  padding: 5px;
+  width: 48px;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.projectLink {
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 5px;
+  display: block;
+}
+
+a.projectLink:hover {
+  text-decoration: underline;
+  border: 1px solid cornsilk;
+  border-radius: 5px;
+  background-color: cornsilk;
+}
+
+a img:hover {
+  border: 1px solid cornsilk;
+  border-radius: 5px;
+  background-color: cornsilk;
 }
