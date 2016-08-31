@@ -46,31 +46,30 @@ h1, h2, h3 {
   box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.5);
 }
 
-#projects {
+/*#projects {
   text-align: center;
   margin: 10px auto;
   width: 90%;
-}
+}*/
 
-.projectContent {
+.section-Content {
   text-align: center;
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 20px auto;
 }
 
 .projectDescription {
   vertical-align: top;
   text-align: left;
   display: inline-block;
-  width: 45%;
+  width: 95%;
   margin-left: 25px;
   font-size: 18px;
 }
 
 img.projectImage {
   margin-top: 20px;
-  width: 45%;
+  width: 95%;
   display: inline-block;
 }
 
@@ -115,6 +114,6 @@ a img:hover {
 }
 
 footer {
-  width: 20%;
-  margin: 15px auto;
+  /*width: 20%;
+  margin: 15px auto;*/
 }
