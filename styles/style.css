@@ -1,7 +1,8 @@
 
+
 body {
   width: 100%;
-  background-color: #87e3e6;
+  background-color: #caf5f6;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -29,7 +30,7 @@ nav li {
   font-size: 20px;
 }
 
-h1, h2, h3 {
+h1 {
   text-align: center;
   margin: 10px;
 }
@@ -41,7 +42,7 @@ h1, h2, h3 {
 .container {
   padding: 10px;
   background-color: #c6c6c6;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.5);
 }
@@ -54,23 +55,31 @@ h1, h2, h3 {
 
 .section-Content {
   text-align: center;
-  width: 100%;
+  width: 90%;
   margin: 20px auto;
 }
 
 .projectDescription {
-  vertical-align: top;
-  text-align: left;
-  display: inline-block;
+  background-color: #f8f3ed;
+  border: 0 solid #f8f3ed;
+  border-radius: 5px;
+  /*vertical-align: top;*/
+  text-align: justify;
+  /*display: inline-block;*/
   width: 95%;
-  margin-left: 25px;
+  /*margin-left: 25px;*/
   font-size: 18px;
+  padding: 5px 10px
 }
 
-img.projectImage {
-  margin-top: 20px;
-  width: 95%;
-  display: inline-block;
+.about-text {
+  text-align: justify;
+}
+
+.projectImage {
+  /*margin-top: 20px;*/
+  width: 100%;
+  /*display: inline-block;*/
 }
 
 img.icon {
@@ -84,8 +93,8 @@ a {
 }
 
 a.projectLink {
-  width: 20%;
-  margin: 0 auto;
+  /*width: 20%;*/
+  /*margin: 0 auto;*/
   margin-bottom: 5px;
   padding: 5px;
   display: block;
@@ -100,11 +109,13 @@ li a:hover {
   background-color: cornsilk;
 }
 
-a.projectLink:hover {
+a.projectLink span:hover {
+  padding: 5px;
   text-decoration: underline;
   border: 0 solid cornsilk;
   border-radius: 5px;
   background-color: cornsilk;
+  margin-bottom: 5px;
 }
 
 a img:hover {
@@ -113,7 +124,45 @@ a img:hover {
   background-color: cornsilk;
 }
 
+.about-text {
+  background-color: #f8f3ed;
+  border: 0 solid #f8f3ed;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 footer {
   /*width: 20%;
   margin: 15px auto;*/
+}
+
+@media screen and (min-width: 800px) {
+  .projectImage {
+    width: 55%;
+    display: inline-block;
+    float: left;
+    /*margin-top: 20px;*/
+    margin-bottom: 20px;
+  }
+
+  .projectDescription {
+    padding: 0 15px 0 15px;
+    width: 35%;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  h2 {
+    clear: both;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+  }
+
+  .section-Content {
+    width: 95%;
+  }
+
 }
