@@ -11,15 +11,17 @@ header {
 }
 
 nav {
-  width: 50%;
+  width: 30%;
   margin: 0 auto;
   padding-bottom: 15px;
 }
 
 nav ul {
+  display: block;
   padding: 0;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
+  justify-content: center;
 }
 
 nav li {
@@ -35,14 +37,21 @@ h1 {
   margin: 10px;
 }
 
+h2 {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  /*margin: 5px;*/
+}
+
 .projectTemplate {
   display: none;
 }
 
 .container {
+  border-radius: 5px;
   padding: 10px;
   background-color: #c6c6c6;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.5);
 }
@@ -60,6 +69,9 @@ h1 {
 }
 
 .projectDescription {
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
+  margin-bottom: 20px;
   background-color: #f8f3ed;
   border: 0 solid #f8f3ed;
   border-radius: 5px;
@@ -77,51 +89,58 @@ h1 {
 }
 
 .projectImage {
+  margin-bottom: 10px;
+  border-radius: 5px;
   /*margin-top: 20px;*/
   width: 100%;
   /*display: inline-block;*/
 }
 
 img.icon {
-  padding: 5px;
+  padding: 10px;
   width: 48px;
   margin: 10px;
 }
 
 a {
+  padding: 5px;
   text-decoration: none;
+}
+
+a:visited {
+  color: #173e42;
 }
 
 a.projectLink {
   /*width: 20%;*/
   /*margin: 0 auto;*/
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   padding: 5px;
   display: block;
   font-size: 18px;
 }
 
 li a:hover {
-  padding: 5px;
+  /*padding: 5px;*/
   text-decoration: underline;
-  border: 0 solid cornsilk;
+  border: 0 solid #fefbf0;
   border-radius: 5px;
-  background-color: cornsilk;
+  background-color: #fefbf0;
 }
 
 a.projectLink span:hover {
   padding: 5px;
   text-decoration: underline;
-  border: 0 solid cornsilk;
+  border: 0 solid #fefbf0;
   border-radius: 5px;
-  background-color: cornsilk;
+  background-color: #fefbf0;
   margin-bottom: 5px;
 }
 
 a img:hover {
-  border: 1px solid cornsilk;
+  border: 0 solid #fefbf0;
   border-radius: 5px;
-  background-color: cornsilk;
+  background-color: #fefbf0;
 }
 
 .about-text {
@@ -142,7 +161,7 @@ footer {
     display: inline-block;
     float: left;
     /*margin-top: 20px;*/
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .projectDescription {
@@ -150,9 +169,13 @@ footer {
     width: 35%;
     display: inline-block;
     margin-left: 10px;
+    box-shadow: 0px 2px 20px 5px rgba(0,0,0,0.5);
+    font-size: 18px;
   }
 
   h2 {
+    /*margin-top: 40px;*/
+    margin-bottom: 5px;
     clear: both;
   }
 
@@ -164,5 +187,28 @@ footer {
   .section-Content {
     width: 95%;
   }
+
+  nav {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+
+  nav ul {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 5px auto;
+    padding: 5px;
+    /*display: inline-block;*/
+    font-size: 20px;
+  }
+
 
 }
