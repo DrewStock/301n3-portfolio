@@ -11,15 +11,9 @@ function ProjectArticle (prs) {
 
 // Prototype of constructor function uses .toHtml() to add new content to the DOM
 ProjectArticle.prototype.toHtml = function() {
-  var $newProjectArticle = $('article.projectTemplate').clone();
-
-  $newProjectArticle.find('a.projectLink').attr('href', this.projectUrl);
-  $newProjectArticle.find('h2').html(this.projectTitle);
-  $newProjectArticle.find('article.projectDescription').html(this.projectDesc);
-  $newProjectArticle.find('img.projectImage').attr('src', this.projectImg);
-  $newProjectArticle.removeClass('projectTemplate');
-
-  return $newProjectArticle;
+  var projectTemplate = $('#projectTemplate').html();
+  var compiledProjectTemplate = Handlebars.compile(projectTemplate);
+  return compiledProjectTemplate(this);
 };
 
 portfolioData.forEach(function(el) {
