@@ -1,7 +1,13 @@
 
+html {
+  /*background: linear-gradient(red, yellow);*/
+}
 
 body {
   width: 100%;
+  height: 500vh;
+  background: linear-gradient(to right, green, yellow);
+  /*background-image: url('../images/Drew_ProfilePicture_2016.jpg');*/
   background-color: #caf5f6;
   font-family: 'Montserrat', sans-serif;
 }
@@ -48,6 +54,7 @@ h2 {
 }*/
 
 .container {
+  display: none;
   border-radius: 5px;
   padding: 10px;
   background-color: #c6c6c6;
@@ -181,7 +188,7 @@ footer {
 
   .container {
     width: 90%;
-    display: flex;
+    display: none;
   }
 
   .section-Content {
