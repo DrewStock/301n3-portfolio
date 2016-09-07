@@ -4,12 +4,10 @@ portfolioView.tabsFeatureMainNav = function() {
   $('.main-nav .tab').on('click', function() {
     var tab_select = $(this).attr('data-content');
     var selectedTab = $('#' + tab_select);
-    $('.container').fadeIn('fast');
-    $('.container').css('display', 'flex');
     $('section.tab-content').hide();
-    selectedTab.show();
+    $('.layout-container').addClass('container-display-flex');
+    selectedTab.fadeIn('fast');
   });
-  // $('.main-nav .tab:first').click();
 };
 
 $(document).ready(function() {
