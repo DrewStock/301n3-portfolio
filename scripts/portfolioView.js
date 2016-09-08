@@ -5,9 +5,9 @@ portfolioView.tabsFeatureMainNav = function() {
     var tab_select = $(this).attr('data-content');
     var selectedTab = $('#' + tab_select);
     $('section.tab-content').hide();
-    selectedTab.show();
+    $('.layout-container').addClass('container-display-flex');
+    selectedTab.fadeIn('slow');
   });
-  $('.main-nav .tab:first').click();
 };
 
 $(document).ready(function() {
