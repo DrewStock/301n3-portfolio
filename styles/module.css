@@ -1,0 +1,60 @@
+
+/* Utilizing SMACSS principles */
+
+/* Module rules */
+
+.projectDescription {
+  width: 95%;
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f3ed;
+  text-align: justify;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 0 solid #f8f3ed;
+  border-radius: 5px;
+  padding: 5px 10px
+}
+
+.projectImage {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.projectLink {
+  margin-bottom: 20px;
+  padding: 5px;
+  display: block;
+  font-size: 18px;
+}
+
+.projectLink:hover {
+  font-weight: bolder;
+  color: #048f13;
+  /*padding: 5px;
+  text-decoration: underline;
+  border-radius: 5px;
+  background-color: #fefbf0;*/
+}
+
+.about-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-align: left;
+  background-color: #f8f3ed;
+  border: 0 solid #f8f3ed;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.icon {
+  padding: 10px;
+  width: 36px;
+  transition: background-color .25s, border-radius .25s;
+}
+
+.icon:hover {
+  border-radius: 5px;
+  background-color: #fefbf0;
+}
