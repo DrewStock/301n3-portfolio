@@ -6,7 +6,8 @@ portfolioView.tabsFeatureMainNav = function() {
     var selectedTab = $('#' + tab_select);
     $('section.tab-content').hide();
     $('.layout-container').addClass('container-display-flex');
-    selectedTab.fadeIn('slow');
+    $('#header').addClass('header-margin-collapse');
+    selectedTab.fadeIn(250);
   });
 };
 

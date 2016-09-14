@@ -1,12 +1,16 @@
 
-/* Utilizing SMACSS principles */
+/**** Utilizing SMACSS principles ****/
 
-/* State rules */
-
-.container-display-none {
-  display: none;
-}
+/**** State rules ****/
 
 .container-display-flex {
   display: flex;
 }
+
+.header-margin-collapse {
+  margin-top: 25px;
+}
+
+/*.container-display-none {
+  display: none;
+}*/
