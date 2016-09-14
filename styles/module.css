@@ -1,7 +1,7 @@
 
-/* Utilizing SMACSS principles */
+/**** Utilizing SMACSS principles ****/
 
-/* Module rules */
+/**** Module rules ****/
 
 .projectDescription {
   width: 95%;
@@ -48,13 +48,13 @@
   padding: 20px;
 }
 
-.icon {
+.social-icon {
   padding: 10px;
   width: 36px;
   transition: background-color .25s, border-radius .25s;
 }
 
-.icon:hover {
+.social-icon:hover {
   border-radius: 5px;
   background-color: rgba(4, 143, 19, 0.50);
 }

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
   <script id="projectTemplate" type="text/x-handlebars-template">
+    <!-- Project template utilizing Handlebars JS  -->
     <article>
       <h2>
         <a target="_blank" class="projectLink" href="{{projectUrl}}">{{projectTitle}}</a>
@@ -20,8 +21,9 @@
   </script>
 </head>
 <body>
-  <header>
+  <header id="header">
     <h1>Portfolio of Drew Stock</h1>
+  <!-- Main Nav -->
   <nav class="main-nav">
     <ul>
       <li class="tab" data-content="projects">
@@ -36,30 +38,33 @@
     </ul>
   </nav>
   </header>
-  <div class="layout-container">
+  <div class="layout-container"><!-- Container for portfolio content -->
+    <!-- "Projects" section, content added to DOM via JavaScript and Handlebars JS -->
     <section id="projects" class="tab-content layout-section-Content">
     </section>
+    <!-- "About" section, current content is Ipsum text. Will be updating to include personal info -->
     <section id="about" class="tab-content layout-section-Content">
       <!-- PDX Ipsum - http://www.pdxipsum.com/  -->
       <p class="about-text">Mount Tabor natural rivers wood-fired oven pickled game nights gluten free indie rock rain vintage dog parks Gresham locavore gentrification IPA. Organic a band of one guy with a keytar bubble tea IPA Hawthorne joggers punk rock Kristian Foden-Vencil clouds Alberta stripclubs snowpacolypse vibrant vegan strip clubs purveyor of fine goods pork belly. Last Thursday tall bikes beard patchouli Grimm west hills money brewvana sustainable vegan stripclubs Portlandia flannel food carts Beaverton Belmont. artisan mini-mart Forest Park chicken coop DIY late-night happy hours blackberries vegan new seasons plaid going to the coast dreadlocks charcuterie put a bird on it stumptown nitro brew.<br>
       <br>Gluten Free flannel Voodoo Donuts Alberta Arts Forest Park hipster house sustainable pickled Oregon Trail zoobombing nitro brew more rain Portlandia bridgetown. Vegan Strip Clubs natural Last Thursday beardfest clouds new urbanist First Thursdays nanobrewery bubble tea organic local honey Grimm vegan meatball sub west hills money scenester DIY. Pinot Noir secular humanists veggie burger black metal white people cashew cheese Doug Fir Belmont small plates. Urban Farmer duck fat confit patio chicken coop stumptown raised beds Cascadia zinester rain no, you go Mount Tabor Hawthorne Hawthorne stripclubs indie rock tall bikes nothin' muffin pearl district also beers vibrant Burnside Beaverton Plaid Pantry Gresham.
       </p>
     </section>
+    <!-- "Connect" section with social links -->
     <section id="connect" class="tab-content layout-section-Content">
       <a target="_blank" href="https://github.com/DrewStock">
-        <img class="icon" src="images/github-icon-240px.png" alt="GitHub icon">
+        <img class="social-icon" src="images/github-icon-240px.png" alt="GitHub icon">
       </a>
       <a target="_blank" href="https://www.facebook.com/Drew.Stock.22">
-        <img class="icon" src="images/facebook-icon-240px.png" alt="Facebook icon">
+        <img class="social-icon" src="images/facebook-icon-240px.png" alt="Facebook icon">
       </a>
       <a target="_blank" href="https://www.linkedin.com/in/drewstock1">
-        <img class="icon" src="images/linkedin-icon-240px.png" alt="LinkedIn icon">
+        <img class="social-icon" src="images/linkedin-icon-240px.png" alt="LinkedIn icon">
       </a>
       <a target="_blank" href="https://www.youtube.com/channel/UCldKQ0T5FEhTEBP2eOfLugw">
-        <img class="icon" src="images/Youtube-icon-240px.png" alt="YouTube icon">
+        <img class="social-icon" src="images/Youtube-icon-240px.png" alt="YouTube icon">
       </a>
     </section>
-  </div>
+  </div><!-- Container for portfolio content -->
   <footer>
   </footer>
   <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
