@@ -11,6 +11,9 @@ portfolioView.tabsFeatureMainNav = function() {
   });
 };
 
-$(document).ready(function() {
+portfolioView.initIndexPage = function() {
+  ProjectArticle.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
   portfolioView.tabsFeatureMainNav();
-});
+};

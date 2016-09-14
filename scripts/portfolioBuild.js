@@ -1,5 +1,3 @@
-// This variable stores an array that contains the project article objects which are created by the constructor function
-var projectArticles = [];
 
 // Object constructor function that creates project article objects
 function ProjectArticle (prs) {
@@ -9,6 +7,8 @@ function ProjectArticle (prs) {
   this.projectImg = prs.projectImg;
 };
 
+ProjectArticle.all = [];
+
 // Prototype of constructor function uses .toHtml() to add new content to the DOM
 ProjectArticle.prototype.toHtml = function() {
   var projectTemplate = $('#projectTemplate').html();
@@ -16,10 +16,50 @@ ProjectArticle.prototype.toHtml = function() {
   return compiledProjectTemplate(this);
 };
 
-portfolioData.forEach(function(el) {
-  projectArticles.push(new ProjectArticle(el));
-});
+ProjectArticle.loadAll = function(sourceData) {
+  sourceData.forEach(function(ele) {
+    ProjectArticle.all.push(new ProjectArticle(ele));
+  });
+};
 
-projectArticles.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+ProjectArticle.retrieveAll = function() {
+  $.ajax({
+    url: './data/portfolioSourceData.json',
+    method: 'HEAD',
+    success: function(data, message, xhr) {
+      console.log('xhr', xhr);
+      var etag = xhr.getResponseHeader('ETag');
+      console.log('etag', etag);
+      if (localStorage.etag){
+        var localEtag = localStorage.getItem('etag');
+        if (localEtag === etag && localStorage.sourceData) {
+          console.log('etag matches and in local storage');
+          retrieveFromLocalStorage();
+        } else {
+          retrieveFromDisk();
+        }
+      } else {
+        retrieveFromDisk();
+      }
+      localStorage.setItem('etag', etag);
+    }
+  });
+
+  function retrieveFromDisk(){
+    console.log('using ajax');
+    $.getJSON('./data/portfolioSourceData.json', function(data) {
+      console.log('sourceData:', data);
+      ProjectArticle.loadAll(data);
+      localStorage.setItem('sourceData', JSON.stringify(data));
+      portfolioView.initIndexPage();
+    });
+  }
+
+  function retrieveFromLocalStorage(){
+    console.log('using local storage');
+    var localStorageData = localStorage.getItem('sourceData');
+    var localStorageDataJSON = JSON.parse(localStorageData);
+    ProjectArticle.loadAll(localStorageDataJSON);
+    portfolioView.initIndexPage();
+  }
+};
