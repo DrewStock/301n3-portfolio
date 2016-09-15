@@ -9,7 +9,7 @@ html {
 body {
   width: 100%;
   height: 300vh;
-  background: linear-gradient(#ecf8f8, #037072);
+  background: linear-gradient(#b2f6f6, #037072);
   /*background-color: #caf5f6;*/
   /*font-family: 'Montserrat', sans-serif;*/
   font-family: 'Raleway', sans-serif;
@@ -34,6 +34,9 @@ nav ul {
   /*width: 100%;*/
   padding: 0;
   margin: 0 auto;
+  margin-bottom: 15px;
+  background-color: rgba(250,250,250,0.75);
+  border-radius: 5px;
   /*justify-content: center;*/
 }
 

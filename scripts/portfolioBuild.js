@@ -7,21 +7,24 @@ function ProjectArticle (prs) {
   this.projectImg = prs.projectImg;
 };
 
+// Declaration of ProjectArticle.all array
 ProjectArticle.all = [];
 
-// Prototype of constructor function uses .toHtml() to add new content to the DOM
+// Prototype of constructor function to add new content to the DOM using Handlebars JS template
 ProjectArticle.prototype.toHtml = function() {
   var projectTemplate = $('#projectTemplate').html();
   var compiledProjectTemplate = Handlebars.compile(projectTemplate);
   return compiledProjectTemplate(this);
 };
 
+// Using push method on ProjectArticle.all to add portfolio sourceData (JSON objects) to array
 ProjectArticle.loadAll = function(sourceData) {
   sourceData.forEach(function(ele) {
     ProjectArticle.all.push(new ProjectArticle(ele));
   });
 };
 
+// AJAX call to get portfolio sourceData from JSON file
 ProjectArticle.retrieveAll = function() {
   $.ajax({
     url: './data/portfolioSourceData.json',
@@ -30,6 +33,7 @@ ProjectArticle.retrieveAll = function() {
       console.log('xhr', xhr);
       var etag = xhr.getResponseHeader('ETag');
       console.log('etag', etag);
+      // Conditional statement for cache invalidation
       if (localStorage.etag){
         var localEtag = localStorage.getItem('etag');
         if (localEtag === etag && localStorage.sourceData) {
@@ -45,6 +49,7 @@ ProjectArticle.retrieveAll = function() {
     }
   });
 
+  // Helper function to get sourceData from JSON file if it isn't stored in localStorage
   function retrieveFromDisk(){
     console.log('using ajax');
     $.getJSON('./data/portfolioSourceData.json', function(data) {
@@ -55,6 +60,7 @@ ProjectArticle.retrieveAll = function() {
     });
   }
 
+  // Helper function to get sourceData from localStorage
   function retrieveFromLocalStorage(){
     console.log('using local storage');
     var localStorageData = localStorage.getItem('sourceData');
