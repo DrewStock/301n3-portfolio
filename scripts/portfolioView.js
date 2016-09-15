@@ -1,5 +1,8 @@
+
+// Declaration of portfolioView object
 var portfolioView = {};
 
+// Controls view of tabs feature on main-nav
 portfolioView.tabsFeatureMainNav = function() {
   $('.main-nav .tab').on('click', function() {
     var tab_select = $(this).attr('data-content');
@@ -11,6 +14,10 @@ portfolioView.tabsFeatureMainNav = function() {
   });
 };
 
-$(document).ready(function() {
+// Initialization of index page
+portfolioView.initIndexPage = function() {
+  ProjectArticle.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
   portfolioView.tabsFeatureMainNav();
-});
+};
