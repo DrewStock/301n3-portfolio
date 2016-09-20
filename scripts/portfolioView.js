@@ -13,6 +13,7 @@
       $('.layout-container').addClass('container-display-flex');
       $('#header').addClass('header-margin-collapse');
       selectedTab.fadeIn(250);
+      $('.portfolio-stats').addClass('stats-display');
     });
   };
 
@@ -21,6 +22,7 @@
       $('#projects').append(a.toHtml());
     });
     portfolioView.tabsFeatureMainNav();
+    $('.project-count').text(ProjectArticle.allProjects().length);
   };
 
   module.portfolioView = portfolioView;

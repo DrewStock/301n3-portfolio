@@ -71,6 +71,20 @@
     }
   };
 
+  // Get a count of all projects
+  ProjectArticle.allProjects = function () {
+    return ProjectArticle.all.map(function (projectArticle) {
+      return projectArticle.projectTitle;
+    })
+    .reduce(function (acc, name) {
+      if (acc.indexOf(name) === -1) {
+        acc.push(name);
+      }
+      return acc;
+    }, []);
+  };
+
+
   module.ProjectArticle = ProjectArticle;
 
 })(window);
