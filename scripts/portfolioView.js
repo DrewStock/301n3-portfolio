@@ -1,23 +1,30 @@
 
-// Declaration of portfolioView object
-var portfolioView = {};
+(function(module) {
 
-// Controls view of tabs feature on main-nav
-portfolioView.tabsFeatureMainNav = function() {
-  $('.main-nav .tab').on('click', function() {
-    var tab_select = $(this).attr('data-content');
-    var selectedTab = $('#' + tab_select);
-    $('section.tab-content').hide();
-    $('.layout-container').addClass('container-display-flex');
-    $('#header').addClass('header-margin-collapse');
-    selectedTab.fadeIn(250);
-  });
-};
+  // Declaration of portfolioView object
+  var portfolioView = {};
 
-// Initialization of index page
-portfolioView.initIndexPage = function() {
-  ProjectArticle.all.forEach(function(a){
-    $('#projects').append(a.toHtml());
-  });
-  portfolioView.tabsFeatureMainNav();
-};
+  // Controls view of tabs feature on main-nav
+  portfolioView.tabsFeatureMainNav = function() {
+    $('.main-nav .tab').on('click', function() {
+      var tab_select = $(this).attr('data-content');
+      var selectedTab = $('#' + tab_select);
+      $('section.tab-content').hide();
+      $('.layout-container').addClass('container-display-flex');
+      $('#header').addClass('header-margin-collapse');
+      selectedTab.fadeIn(250);
+      $('.portfolio-stats').addClass('stats-display');
+    });
+  };
+
+  portfolioView.initIndexPage = function() {
+    ProjectArticle.all.map(function(a){
+      $('#projects').append(a.toHtml());
+    });
+    portfolioView.tabsFeatureMainNav();
+    $('.project-count').text(ProjectArticle.allProjects().length);
+  };
+
+  module.portfolioView = portfolioView;
+
+})(window);

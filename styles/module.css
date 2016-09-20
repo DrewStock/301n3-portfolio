@@ -58,3 +58,9 @@
   border-radius: 5px;
   background-color: rgba(4, 143, 19, 0.50);
 }
+
+.portfolio-stats {
+  display: none;
+  padding: 0;
+  list-style: none;
+}
