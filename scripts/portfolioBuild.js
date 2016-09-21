@@ -28,7 +28,7 @@
   // AJAX call to get portfolio sourceData from JSON file
   ProjectArticle.retrieveAll = function() {
     $.ajax({
-      url: './data/portfolioSourceData.json',
+      url: '/data/portfolioSourceData.json',
       method: 'HEAD',
       success: function(data, message, xhr) {
         console.log('xhr', xhr);
@@ -53,7 +53,7 @@
     // Helper function to get sourceData from JSON file if it isn't stored in localStorage
     function retrieveFromDisk(){
       console.log('using ajax');
-      $.getJSON('./data/portfolioSourceData.json', function(data) {
+      $.getJSON('/data/portfolioSourceData.json', function(data) {
         console.log('sourceData:', data);
         ProjectArticle.loadAll(data);
         localStorage.setItem('sourceData', JSON.stringify(data));
