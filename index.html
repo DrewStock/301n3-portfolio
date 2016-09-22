@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+
   <!-- "Projects" section template utilizing Handlebars JS  -->
   <script id="projectTemplate" type="text/x-handlebars-template">
     <article>
@@ -19,14 +20,17 @@
       <article class="projectDescription">{{{projectDesc}}}</article>
     </article>
   </script>
+
   <!-- "About" section template utilizing Handlebars JS  -->
   <script id="bioTemplate" type="text/x-handlebars-template">
     <article class="bio-text">{{{bioText}}}</article>
   </script>
+
 </head>
 <body>
   <header id="header">
     <h1>Portfolio of Drew Stock</h1>
+
   <!-- Main Nav -->
   <nav class="main-nav">
     <ul>
@@ -42,14 +46,16 @@
     </ul>
   </nav>
   </header>
+
   <div class="layout-container"><!-- Container for portfolio content -->
+
     <!-- "Projects" section, content added to DOM via JavaScript and Handlebars JS -->
-    <section id="projects" class="tab-content layout-section-Content">
-    </section>
-    <!-- TODO: Utilize template to abstract content source data from document -->
+    <section id="projects" class="tab-content layout-section-Content"></section>
+
+    <!-- DONE: Utilize template to abstract content source data from document -->
     <!-- "About" section, current content is Ipsum text. Will be updating to include personal info -->
-    <section id="about" class="tab-content layout-section-Content">
-    </section>
+    <section id="about" class="tab-content layout-section-Content"></section>
+
     <!-- "Connect" section with social links -->
     <section id="connect" class="tab-content layout-section-Content">
       <a target="_blank" href="https://github.com/DrewStock">
@@ -66,6 +72,7 @@
       </a>
     </section>
   </div><!-- Container for portfolio content -->
+  
   <footer>
     <!-- <section>
       <ul class="portfolio-stats">Number of projects:

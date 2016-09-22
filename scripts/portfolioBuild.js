@@ -1,7 +1,7 @@
 (function(module) {
 
-//TODO: Utilize functional programming to assign properties for new Projects object
-// DONE!
+//DONE: Utilize functional programming to assign properties for portfolio objects
+
   // Object constructor function that creates project article objects
   function Projects(props) {
     Object.keys(props).forEach(function(e, index, keys) {
@@ -76,7 +76,7 @@
         console.log('projectsSourceData:', data);
         Projects.loadAll(data);
         localStorage.setItem('projectsSourceData', JSON.stringify(data));
-        portfolioView.initIndexPage();
+        // portfolioView.initIndexPage();
       });
     }
 
@@ -86,7 +86,7 @@
       var localStorageData = localStorage.getItem('projectsSourceData');
       var localStorageDataJSON = JSON.parse(localStorageData);
       Projects.loadAll(localStorageDataJSON);
-      portfolioView.initIndexPage();
+      // portfolioView.initIndexPage();
     }
   };
 
@@ -134,20 +134,6 @@
       portfolioView.initIndexPage();
     }
   };
-
-  // // Get a count of all projects
-  // Projects.allProjects = function () {
-  //   return Projects.all.map(function (projectArticle) {
-  //     return projectArticle.projectTitle;
-  //   })
-  //   .reduce(function (acc, name) {
-  //     if (acc.indexOf(name) === -1) {
-  //       acc.push(name);
-  //     }
-  //     return acc;
-  //   }, []);
-  // };
-
 
   module.Projects = Projects;
 
