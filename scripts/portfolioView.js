@@ -1,4 +1,5 @@
 
+// Module wrapped in IIFE
 (function(module) {
 
   // Declaration of portfolioView object
@@ -16,7 +17,6 @@
     });
   };
 
-  //TODO: Refactor this function
   portfolioView.initIndexPage = function() {
     Projects.all.map(function(a){
       $('#projects').append(a.toHtml());

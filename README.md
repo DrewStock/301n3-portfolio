@@ -19,3 +19,19 @@ This portfolio represents my web development work and is an ongoing project in t
   * Incorporating Lee's feedback:
     * Updating this README.md
     * More thorough commenting of my code
+* Class 06
+  * Moved portfolio data to JSON object
+  * Utilizing AJAX call to get portfolio data:
+    * Data is cached in localStorage
+    * Performing cache invalidation, so that AJAX calls are only made when data has been updated
+* Class 07
+  * Incorporate functional programming concepts into portfolio codebase
+* Class 08
+  * No portfolio assignment for this class
+* Class 09
+  * Performed code review to identify refactoring opportunities in portfolio codebase
+    * Refactoring completed:
+      * Utilized functional programming to assign properties for portfolio objects
+      * Utilized Handlebars JS template to abstract content source data (for About section) from document
+    * Refactoring To Do:
+      * Refactor code for AJAX calls and caching of source data to be more efficient
