@@ -1,4 +1,5 @@
 
+// Module wrapped in IIFE
 (function(module) {
 
   // Declaration of portfolioView object
@@ -12,17 +13,18 @@
       $('section.tab-content').hide();
       $('.layout-container').addClass('container-display-flex');
       $('#header').addClass('header-margin-collapse');
-      selectedTab.fadeIn(250);
-      $('.portfolio-stats').addClass('stats-display');
+      selectedTab.fadeIn(500);
     });
   };
 
   portfolioView.initIndexPage = function() {
-    ProjectArticle.all.map(function(a){
+    Projects.all.map(function(a){
       $('#projects').append(a.toHtml());
     });
+    About.all.map(function(a){
+      $('#about').append(a.toHtml());
+    });
     portfolioView.tabsFeatureMainNav();
-    $('.project-count').text(ProjectArticle.allProjects().length);
   };
 
   module.portfolioView = portfolioView;
