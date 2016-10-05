@@ -35,3 +35,9 @@ This portfolio represents my web development work and is an ongoing project in t
       * Utilized Handlebars JS template to abstract content source data (for About section) from document
     * Refactoring To Do:
       * Refactor code for AJAX calls and caching of source data to be more efficient
+* Class 10
+  * No portfolio assignment for this class
+* Class 11
+  * Added SPA routing, utilizing page.js routes
+* Class 12
+  * Utilizing authenticated AJAX call to GitHub API to retrieve my user data (my "starred" repos), render that data to a Handlebars template and then update the document
