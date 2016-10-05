@@ -26,13 +26,14 @@
     <article class="bio-text">{{{bioText}}}</article>
   </script>
 
-  <script id="starred-template" type="text/x-handlebars-template">
-  <li>
-    <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+  <script id="favoriteRepos-template" type="text/x-handlebars-template">
+  <li class="favorite-repos">
+    <h3>
+    <a  href="{{html_url}}" target="_blank">{{name}}</a>
+    </h3>
     <p>Description: {{description}}</p>
-    <p>Language: {{languages}}</p>
-    <p>Created: {{created_at}}</p>
-    <p>Last updated: {{updated_at}}</p>
+    <p>Created: {{formatDate created_at}}</p>
+    <p>Last updated: {{formatDate updated_at}}</p>
   </li>
 
 </script>
@@ -82,7 +83,8 @@
       <a target="_blank" href="https://www.youtube.com/channel/UCldKQ0T5FEhTEBP2eOfLugw">
         <img class="social-icon" src="images/Youtube-icon-240px.png" alt="YouTube icon">
       </a>
-      <ul>A few of my favorite repos on GitHub...
+      <h3>A few of my favorite repos on GitHub...</h3>
+      <ul class="favorite-repos">
       </ul>
     </section>
   </div><!-- Container for portfolio content -->
@@ -98,6 +100,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script> -->
   <script type ="text/javascript" src="vendor/scripts/jquery-3.1.1.js"></script>
   <script type ="text/javascript" src="vendor/scripts/handlebars-v4.0.5.js"></script>
+  <script type ="text/javascript" src="scripts/formatDateHelper.js"></script>
+
   <script type ="text/javascript" src="vendor/scripts/page.js"></script>
   <script type ="text/javascript" src="scripts/githubToken.js"></script>
 
@@ -106,9 +110,8 @@
   <script type="text/javascript" src="scripts/projectsController.js"></script>
   <script type="text/javascript" src="scripts/aboutController.js"></script>
   <script type="text/javascript" src="scripts/connectController.js"></script>
-  <script type="text/javascript" src="scripts/starred.js"></script>
-  <script type="text/javascript" src="scripts/starredView.js"></script>
-  <script type="text/javascript" src="scripts/starredController.js"></script>
+  <script type="text/javascript" src="scripts/favoriteRepos.js"></script>
+  <script type="text/javascript" src="scripts/favoriteReposView.js"></script>
 
   <script type="text/javascript" src="scripts/routes.js"></script>
 

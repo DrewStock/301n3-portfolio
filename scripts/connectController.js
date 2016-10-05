@@ -8,7 +8,7 @@
     $('.layout-container').addClass('container-display-flex');
     $('#header').addClass('header-margin-collapse');
     // $('#connect').show().siblings().hide();
-    starred.requestStarred(starredView.index);
+    favoriteRepos.requestStarred(favoriteReposView.index);
 
   };
 

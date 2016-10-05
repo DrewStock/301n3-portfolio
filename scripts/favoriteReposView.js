@@ -1,5 +1,5 @@
 (function(module) {
-  var starredView = {};
+  var favoriteReposView = {};
 
   var connectQuery = function() {
     var $connect = $('#connect');
@@ -7,21 +7,21 @@
     $connect.show().siblings().hide();
   };
 
-  var render = function(starred) {
-    var template = Handlebars.compile($('#starred-template').text());
-    return template(starred);
+  var render = function(favoriteRepos) {
+    var template = Handlebars.compile($('#favoriteRepos-template').text());
+    return template(favoriteRepos);
   };
 
   // DONE: If all the data is loaded, we can prep the UI and render the repos.
-  starredView.index = function() {
-    // connectQuery();
+  favoriteReposView.index = function() {
+    connectQuery();
 
     $('#connect ul').append(
       // REVIEW: we added the `name` property here as our initial filter property. Try
       // changing it to see what happens!
-      starred.all.map(render)
+      favoriteRepos.all.map(render)
     );
   };
 
-  module.starredView = starredView;
+  module.favoriteReposView = favoriteReposView;
 })(window);
