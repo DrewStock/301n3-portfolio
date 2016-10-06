@@ -23,6 +23,9 @@
 
   <!-- "About" section template utilizing Handlebars JS  -->
   <script id="bioTemplate" type="text/x-handlebars-template">
+    <article>
+      <img class="bio-photo" src="{{bioPhoto}}" alt="{{bioPhotoAltTag}}">
+    </article>
     <article class="bio-text">{{{bioText}}}</article>
   </script>
 
@@ -66,8 +69,7 @@
     <!-- "Projects" section, content added to DOM via JavaScript and Handlebars JS -->
     <section id="projects" class="tab-content layout-section-Content"></section>
 
-    <!-- DONE: Utilize template to abstract content source data from document -->
-    <!-- "About" section, current content is Ipsum text. Will be updating to include personal info -->
+    <!-- "About" section, my biographical content -->
     <section id="about" class="tab-content layout-section-Content"></section>
 
     <!-- "Connect" section with social links -->

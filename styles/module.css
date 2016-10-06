@@ -48,6 +48,16 @@
   padding: 20px;
 }
 
+.bio-text a {
+  padding: 0;
+  color: #048f13;
+  transition: font-weight .25s;
+}
+
+.bio-text a:hover {
+  font-weight: bolder;
+}
+
 .social-icon {
   padding: 10px;
   width: 36px;
@@ -79,4 +89,11 @@ li.favorite-repos {
 
 li.favorite-repos p {
   margin: 0.5em;
+}
+
+.bio-photo {
+  max-width: 100%;
+  width: 25%;
+  border-radius: 100%;
+  padding: 1em;
 }
