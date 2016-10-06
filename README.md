@@ -41,3 +41,5 @@ This portfolio represents my web development work and is an ongoing project in t
   * Added SPA routing, utilizing page.js routes
 * Class 12
   * Utilizing authenticated AJAX call to GitHub API to retrieve my user data (my "starred" repos), render that data to a Handlebars template and then update the document
+* Class 13
+  * Deployed [my portfolio] (https://drew-stock-portfolio.herokuapp.com/) to live production environment via Heroku
