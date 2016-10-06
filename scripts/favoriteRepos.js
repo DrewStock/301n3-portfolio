@@ -8,9 +8,6 @@
     $.ajax({
       url: 'https://api.github.com/users/drewstock/starred',
       type: 'GET',
-      headers: {
-        'Authorization': 'token ' + githubToken
-      },
       success: function(data) {
         favoriteRepos.all = data;
         callback();
