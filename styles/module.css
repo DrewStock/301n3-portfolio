@@ -64,3 +64,19 @@
   padding: 0;
   list-style: none;
 }
+
+.favorite-repos {
+  padding: 0;
+  list-style: none;
+}
+
+li.favorite-repos {
+  background-color: antiquewhite;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+li.favorite-repos p {
+  margin: 0.5em;
+}

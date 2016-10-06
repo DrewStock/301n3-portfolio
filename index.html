@@ -26,7 +26,21 @@
     <article class="bio-text">{{{bioText}}}</article>
   </script>
 
+  <!-- Handlebars template for "My favorite GitHub repos" content in the "Connect" section. I'm using an authenticated AJAX call to the GitHub API to retrieve the data that is being used to populate this template. -->
+  <script id="favoriteRepos-template" type="text/x-handlebars-template">
+    <li class="favorite-repos">
+      <h3>
+      <a  href="{{html_url}}" target="_blank">{{name}}</a>
+      </h3>
+      <p>Description: {{description}}</p>
+      <p>Stargazers count: {{stargazers_count}}</p>
+      <p>Language: {{language}}</p>
+      <p>Created: {{formatDate created_at}}</p>
+      <p>Last updated: {{formatDate updated_at}}</p>
+    </li>
+  </script>
 </head>
+
 <body>
   <header id="header">
     <h1>Portfolio of Drew Stock</h1>
@@ -70,6 +84,10 @@
       <a target="_blank" href="https://www.youtube.com/channel/UCldKQ0T5FEhTEBP2eOfLugw">
         <img class="social-icon" src="images/Youtube-icon-240px.png" alt="YouTube icon">
       </a>
+      <h3>And for GitHub users, here are a few of my favorite repos...</h3>
+      <!-- "My favorite GitHub repos" content, which is added to the document via Handlebars template -->
+      <ul class="favorite-repos">
+      </ul>
     </section>
   </div><!-- Container for portfolio content -->
 
@@ -80,19 +98,18 @@
       </ul>
     </section> -->
   </footer>
-  <!-- <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script> -->
   <script type ="text/javascript" src="vendor/scripts/jquery-3.1.1.js"></script>
   <script type ="text/javascript" src="vendor/scripts/handlebars-v4.0.5.js"></script>
+  <script type ="text/javascript" src="scripts/formatDateHelper.js"></script>
   <script type ="text/javascript" src="vendor/scripts/page.js"></script>
+  <script type ="text/javascript" src="scripts/githubToken.js"></script>
   <script type="text/javascript" src="scripts/portfolioBuild.js"></script>
   <script type="text/javascript" src="scripts/portfolioView.js"></script>
   <script type="text/javascript" src="scripts/projectsController.js"></script>
   <script type="text/javascript" src="scripts/aboutController.js"></script>
   <script type="text/javascript" src="scripts/connectController.js"></script>
+  <script type="text/javascript" src="scripts/favoriteRepos.js"></script>
+  <script type="text/javascript" src="scripts/favoriteReposView.js"></script>
   <script type="text/javascript" src="scripts/routes.js"></script>
-
-  <!-- <script>Projects.retrieveAll();</script>
-  <script>About.retrieveAll();</script> -->
 </body>
 </html>
