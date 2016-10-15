@@ -11,4 +11,9 @@ page('/about', aboutController.index);
 
 page ('/connect', connectController.index);
 
+page ('/connect/GitHub-favorites', function(e) {
+  favoriteRepos.requestStarred(favoriteReposView.index);
+});
+
+
 page();

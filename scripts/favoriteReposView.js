@@ -13,10 +13,11 @@
 
   favoriteReposView.index = function() {
     connectQuery();
-
+    $('#connect ul').hide();
     $('#connect ul').append(
       favoriteRepos.all.map(render)
     );
+    $('#connect ul').fadeIn(500);
   };
 
   module.favoriteReposView = favoriteReposView;
