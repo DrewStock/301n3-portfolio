@@ -16,7 +16,9 @@
       <h2>
         <a target="_blank" class="projectLink" href="{{projectUrl}}">{{projectTitle}}</a>
       </h2>
-      <img class="projectImage" src="{{projectImg}}">
+      <a target="_blank" href="{{projectUrl}}">
+          <img class="projectImage" src="{{projectImg}}"></a>
+      <!-- <img class="projectImage" src="{{projectImg}}"> -->
       <article class="projectDescription">{{{projectDesc}}}</article>
     </article>
   </script>
@@ -86,7 +88,9 @@
       <a target="_blank" href="https://www.youtube.com/channel/UCldKQ0T5FEhTEBP2eOfLugw">
         <img class="social-icon" src="images/Youtube-icon-240px.png" alt="YouTube icon">
       </a>
-      <h3>And for GitHub users, here are a few of my favorite repos...</h3>
+      <h3>
+        <a href="/connect/GitHub-favorites">And for GitHub users, here are a few of my favorite repos...</a>
+      </h3>
       <!-- "My favorite GitHub repos" content, which is added to the document via Handlebars template -->
       <ul class="favorite-repos">
       </ul>
