@@ -1,7 +1,5 @@
-# Portfolio of Drew Stock
-==================================================
-This portfolio represents my web development work and is an ongoing project in the [Code 301:Intermediate Software Development] (https://www.codefellows.org/courses/code-301/intermediate-software-development/) course that I'm currently enrolled in at the Portland, OR campus of [Code Fellows] (https://www.codefellows.org/). As the course progresses, I'll be updating my portfolio to incorporate the coding languages, frameworks and processes that I'm learning about.
-==================================================
+## This portfolio was a project in the [Code 301: Intermediate Software Development](https://www.codefellows.org/courses/code-301/intermediate-software-development/) course that I completed while enrolled at the Portland, OR campus of [Code Fellows](https://www.codefellows.org/) (now known as [Alchemy Code Lab](http://www.alchemycodelab.com/)). As the course progressed, I updated my portfolio to incorporate the coding languages, frameworks and processes that I was learning about.
+---
 ## Version history
 * Class 01
   * Initial version of portfolio
@@ -12,10 +10,10 @@ This portfolio represents my web development work and is an ongoing project in t
 * Class 03
   * Updated main nav to be responsive to smaller & larger screen sizes
 * Class 04
-  * Utilized [Handlebars JS] (http://handlebarsjs.com/) for project template
-  * Restructured styling to incorporate [SMACSS] (https://smacss.com/) principles
+  * Utilized [Handlebars JS](http://handlebarsjs.com/) for project template
+  * Restructured styling to incorporate [SMACSS](https://smacss.com/) principles
 * Class 05
-  * Completed pair review of portfolio with [Lee Zamastil] (https://github.com/elzed)
+  * Completed pair review of portfolio with [Lee Zamastil](https://github.com/elzed)
   * Incorporating Lee's feedback:
     * Updating this README.md
     * More thorough commenting of my code
@@ -42,5 +40,5 @@ This portfolio represents my web development work and is an ongoing project in t
 * Class 12
   * Utilizing authenticated AJAX call to GitHub API to retrieve my user data (my "starred" repos), render that data to a Handlebars template and then update the document
 * Class 13
-  * Deployed [my portfolio] (https://drew-stock-portfolio.herokuapp.com/) to live production environment via Heroku
+  * Deployed [my portfolio](https://drew-stock-portfolio.herokuapp.com/) to live production environment via Heroku
  * Updated Node version 
